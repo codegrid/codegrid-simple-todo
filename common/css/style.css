@@ -1,11 +1,24 @@
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: #CCC;
 }
 
 .mod-all {
   margin: 0 auto;
-  width: 600px;
+  width: 490px;
+  padding: 0 10px;
+  background: #FFF;
+  min-height: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
 }
 
 .mod-todoInputForm input[type="text"] {
