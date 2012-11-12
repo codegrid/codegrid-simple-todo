@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Simple Todo</title>
+<link rel="stylesheet" href="../common/css/style.css">
+<script src="../common/js/jquery-1.8.2.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/backbone.js"></script>
+<script src="js/lib/backbone-localstorage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/model/todo.js"></script>
+<script src="js/collection/todos.js"></script>
+<script src="js/view/todoItem.js"></script>
+<script src="js/view/todoList.js"></script>
+<script src="js/view/todoFilter.js"></script>
+<script src="js/view/todoInputForm.js"></script>
+<script src="js/controller/todo.js"></script>
+</head>
+<body>
+<div class="mod-all">
+
+<h1>Simple Todo</h1>
+
+<form class="mod-todoInputForm">
+  <input type="text" name="todo" placeholder="Todoを入力してください">
+  <input type="submit" value="Add Todo">
+</form>
+
+<div class="mod-todoFilter">
+  <a href="#" class="all current">すべて</a> /
+  <a href="#active" class="active">未完了</a> /
+  <a href="#completed" class="completed">完了</a>
+</div>
+
+<ul class="mod-todoList"></ul>
+
+<script type="text/x-tmpl" id="tmpl-todoItem">
+<input type="checkbox" <% if (completed) { %>checked<% } %>>
+<span class="text"><%- text %></span>
+<span class="remove">削除</span>
+</script>
+
+</div>
+</body>
+</html>
